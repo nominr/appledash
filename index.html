@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta author="Nomin Rentsendorj" />
+    <title>Apple Dash</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <main>
+      <header class="metrics">
+        <div class="metrics-left">
+          <span id="timer">Time: 0s</span>
+          <span id="apples">Apples: 0</span>
+        </div>
+        
+        <div class="metrics-right">
+          <span id="lives">Lives: 3</span>
+          <button id="pauseBtn" class="btn btn--danger">Pause</button>
+        </div>
+      </header>
+
+      <section class="stage">
+        <canvas id="game" width="800" height="600" aria-label="Game canvas"></canvas>
+
+        <!-- starting the game -->
+        <div id="startOverlay" class="overlay show">
+          <div>
+            <h1>Apple Dash</h1>
+            <p>Move left and right with mouse, and jump with a mouse click or spacebar.</p>
+            <p>Make sure to stay in frame with your mouse!</p>
+            <button id="startBtn" class="btn">Start</button>
+          </div>
+        </div>
+
+        <!-- game over -->
+        <div id="gameOverOverlay" class="overlay">
+          <div>
+            <h1>Game Over</h1>
+            <p id="finalScore"></p>
+            <button id="playAgain" class="btn">Play Again</button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="metrics">
+        <div>
+          <strong>Best Time:</strong> <span id="bestTime">0</span>seconds
+          <strong>Most Apples:</strong> <span id="bestApples">0</span>
+        </div>
+        <div>
+          <strong>Pauses:</strong> <span id="pauseCount">0</span>
+        </div>
+      </footer>
+
+      <section class="howto">
+        <h2>How to Play</h2>
+        <p>
+          You control a blue player character who begins with three lives. When you encounter an enemy,
+          which spawn from the left and right in random configurations, you lose one life. Your goal is to stay alive as long as possible and to collect the most apples possible. These
+          statistics are stored in local storage and displayed back to the user.
+          As the game progresses, the enemies will continue to spawn faster and increase in number,
+          making the game more difficult to play.
+          The mouse controls the player's movements from left to right, and to jump, a player can either
+          use the spacebar or click the mouse. It is important to note that the character can only move
+          if the mouse is in the frame of the game.
+        </p>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

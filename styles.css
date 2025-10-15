@@ -1,0 +1,122 @@
+:root{
+    --bg:#0e1a2b;
+    --panel:#11233f;
+    --text:#eaf2ff;
+    --accent:#6ee7b7;
+    --accent-press:#34d399;
+    --danger:#f87171;
+}
+ *{
+    box-sizing:border-box
+}
+ html, body {
+    margin:0;
+    height:100%;
+    background:var(--bg);
+    color:var(--text);
+    font-family: ui-sans-serif, system-ui, Segoe UI, Roboto, Arial 
+}
+ main {
+    max-width:900px;
+    margin:0 auto;
+    padding:12px 
+}
+
+/* metrics styles */
+ .metrics{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:var(--panel);
+    padding:10px 12px;
+    border-radius:14px;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+    margin-bottom:10px 
+}
+ .metrics span{
+    margin-right:12px 
+}
+ .metrics button, .btn{
+    appearance:none;
+    border:0;
+    padding:10px 14px;
+    border-radius:999px;
+    background:var(--accent);
+    color:#052e1a;
+    font-weight:800;
+    cursor:pointer;
+    transition:transform .06s ease, filter .2s 
+}
+ .metrics button:active, .btn:active{
+    transform:translateY(1px);
+    background:var(--accent-press)
+}
+ .btn--danger{
+    background:var(--danger)!important;
+    color:#2b0d0d
+}
+ .stage{
+    position:relative
+}
+ #game{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:14px;
+    box-shadow:0 12px 30px rgba(0,0,0,.35);
+    background:#77c3ff 
+}
+/* Overlays */
+ .overlay{
+    position:absolute;
+    inset:0;
+    display:grid;
+    place-items:center;
+    text-align:center;
+    background:rgba(14,26,43,.62);
+    backdrop-filter:blur(2px);
+    color:white;
+    padding:20px;
+    border-radius:14px;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .15s 
+}
+ .overlay.show{
+    opacity:1;
+    pointer-events:auto
+}
+ .overlay h1{
+    margin:.2rem 0 .6rem
+}
+
+/* Bottom metrics */
+ .metrics{
+    display:flex;
+    justify-content:space-between;
+    margin-top:10px;
+    padding:10px 12px;
+    border-radius:14px;
+    background:var(--panel);
+    box-shadow:0 8px 20px rgba(0,0,0,.25) 
+}
+
+/* how to play */
+.howto {
+  background: var(--panel);
+  color: var(--text);
+  padding: 16px 18px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+  margin: 12px 0;
+  line-height: 1.55;
+}
+
+.howto h2 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+}
+
+.howto p {
+  margin: 8px 0;
+}
