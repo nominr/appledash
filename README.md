@@ -1,4 +1,3 @@
-"netid": "nr58",
 "title": "Apple Dash",
 "site": "https://apple-dash.surge.sh/"
 
